@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Form</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <script src="{{url_for('static', filename='graphFunctions.js')}}"></script>
+</head>
+
+<body>
+  <div class="container">
+    <label class="constraintLab">Event Name</label>
+    <input type="text" class="constraintIn" id="EventName" placeholder="Enter the event name">
+
+    <label class="constraintLab">Event Type</label>
+    <select class="constraintSelect" id="EventType">
+    </select>
+
+    <label class="constraintLab">Date to predict from</label>
+    <input type="date" class="constraintIn" id="FromDate">
+
+    <label class="constraintLab">Day of the Event</label>
+    <input type="date" class="constraintIn" id="StartDate">
+
+    <label class="constraintLab">Number of bookings at the date predicting from</label>
+    <input type="text" class="constraintIn" id="GroupSize" placeholder="Enter the number of bookings">
+
+    <div id="warnDiv"></div>
+
+    <button type="button" id="getPredictionButton" onclick="test()">Get Prediction</button>
+
+    <label class="graphLab">Prediction</label>
+    <img Id="graph" src="">
+  </div>
+</body>
+
+</html>
